@@ -15,12 +15,37 @@
 \begin{scholarship}
   \scholarshipentry{2022}
   {
-    Ternary Particle Separation via Dielectrophoresis (\emph{in prep.})
-  }
+    Numerical investigation of continuous-flow ternary separation of particles
+    in a microchannel with a wall-mounted obstacle using Dielectrophoresis
+    (\emph{Under review by the \href{supervisor}{supervisor}})
+ \vspace{10pt}
+  \begin{itemize}
 
-  \scholarshipentry{2020}
-  {
-    Outokesh, Masoud, Seyed Soheil Mousavi Ajarostaghi, \textbf{Ali Bozorgzadeh}, and Kurosh Sedighi. "Numerical evaluation of the effect of utilizing twisted tape with curved profile as a turbulator on heat transfer enhancement in a pipe." Journal of Thermal Analysis and Calorimetry 140, no. 3 (2020): 1537-1553. (\href{https://link.springer.com/article/10.1007/s10973-020-09336-0}{link})
+    \item The idea is to place a trapezoidal obstacle in the channel to create
+        a gradient in momentum (in the lateral direction) so that in regions
+        closer to the obstacle, mid-size particles experience greater drag force
+        and pass over the planar-angled electrode pair.\vspace{10pt}
+
+    \item We assumed that the fluid flow influences the motion of the particles, but
+          the particles have a negligible effect on the fluid flow (one-way
+          coupling).\vspace{10pt}
+
+    \item We extend the OpenFOAM solvers,
+          \texttt{icoUncoupledKinematicParcelFoam} and \texttt{simpleFoam}, to
+          solve for discrete and continuous phase, respectively. Further,
+          the Dielectrophoretic force on particles has been implemented, by
+          deriving from the abstract base class template \texttt{ParticleForces}
+          (especifically, the \texttt{calcNonCoupled} member function).
+  \vspace{10pt}
+    \item The code code is validated by performing experimental tests using
+      a microdevice previously fabricated in our lab.
+
+  \end{itemize}
+}
+
+\scholarshipentry{2020}
+{
+  Outokesh, Masoud, Seyed Soheil Mousavi Ajarostaghi, \emph{Ali Bozorgzadeh}, and Kurosh Sedighi. "Numerical evaluation of the effect of utilizing twisted tape with curved profile as a turbulator on heat transfer enhancement in a pipe." Journal of Thermal Analysis and Calorimetry 140, no. 3 (2020): 1537-1553. (\href{https://link.springer.com/article/10.1007/s10973-020-09336-0}{link})
   }
 
 \end{scholarship}
