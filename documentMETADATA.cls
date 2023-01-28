@@ -227,7 +227,8 @@
 
 % Render author's linked-in (optional)
 % Usage: \linkedin{<linked-in-nick>}
-\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1/fr}{linkedin.com/in/#1}}
+% \newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1/fr}{linkedin.com/in/#1}}
+\newcommand*{\linkedin}[2]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1}{#2}}
 
 % Render author's personal website (optional)
 % Usage: \personalLink{<website-without-http://www.>}
