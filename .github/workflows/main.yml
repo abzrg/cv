@@ -1,0 +1,29 @@
+name: Compile CV and Release it
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: danteev/texlive:latest
+    env:
+      BUILDDIR: build
+      FILE: cv.pdf
+    permissions:
+      contents: write
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+    - name: Compile using make
+      run: make && mv ${{ env.BUILDDIR }}/main.pdf  ${{ env.BUILDDIR }}/${{ env.FILE }}
+    - name: Release source code + upload ${{ env.BUILDDIR }}/${{ env.FILE }}
+      uses: softprops/action-gh-release@v2
+      with:
+        files: ${{ env.BUILDDIR }}/${{ env.FILE }}
+        body: ${{ github.event.head_commit.message }}
+        draft: false
+        prerelease: false
