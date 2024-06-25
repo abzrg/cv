@@ -60,6 +60,10 @@
   \def\@helvetFont{helvetFont}
 }
 
+\DeclareOption{pazoFont}{
+  \def\@pazoFont{pazoFont}
+}
+
 \DeclareOption{alternative}{
   \def\@alternative{alternate}
 }
@@ -174,6 +178,10 @@
   \RequirePackage{helvet}
   \renewcommand{\familydefault}{\sfdefault}
   \RequirePackage[zerostyle=d]{newtxtt}
+}
+
+\ifdef{\@pazoFont}{
+  \RequirePackage{mathpazo}
 }
 
 %New length definition
