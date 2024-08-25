@@ -201,7 +201,7 @@
 \newcommand{\githubSymbol}{\faGithub}
 \newcommand{\linkSymbol}{\faLink}
 
-\newcommand\link[2]{\color{linkcolor}\href{#1}{#2}\color{Black} }
+\newcommand\link[2]{\color{linkcolor}\href{#1}{#2}\color{Black}\xspace}
 \newcommand\important[1]{\textbf #1}
 
 % Create a tag
@@ -472,3 +472,13 @@
   \end{minipage}%
 }
 
+
+% More spacing for dotfill (0.44em) -> Dotfill
+\makeatletter
+\newcommand \Dotfill {\leavevmode \cleaders \hb@xt@ .88em{\hss $\cdot$\hss }\hfill \kern \z@}
+\makeatother
+
+
+% NAH
+% \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=false,factor=1100,stretch=10,shrink=10]{microtype}
+% \AtBeginEnvironment{verbatim}{\microtypesetup{activate=false}} % To avoid problems with verbatim-areas
