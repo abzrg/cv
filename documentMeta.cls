@@ -76,7 +76,7 @@
 \RequirePackage[english,french]{babel}
 \RequirePackage[utf8]{luainputenc}
 \RequirePackage{url,parskip}
-\RequirePackage[usenames,dvipsnames]{xcolor}
+\RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{fullpage}
 \RequirePackage[margin=1.5cm]{geometry}
 \RequirePackage{fontawesome}
@@ -91,6 +91,7 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{multicol}
 \RequirePackage{amsmath}
+\RequirePackage[raggedrightboxes]{ragged2e}
 
 % % https://myweb.uiowa.edu/rsmorris/latex/ipa.html
 % % https://www.l.u-tokyo.ac.jp/~fkr/tipa/tipaman.pdf
@@ -409,11 +410,22 @@
 %                    }
 %                    {<Technology list>}
 \newcommand\experience[7]{
-  \textbf{#1}    & \textbf{#2, \textsc{#3}, #4}  \\*
+  \textbf{#1}    & \begin{minipage}[t]{\rightcolumnlength}
+                     \textbf{#2}, {\small\textsc{#3}, #4}
+                   \end{minipage}  \\[2pt]
          {#5}    & \begin{minipage}[t]{\rightcolumnlength}
-          #6
-                   \end{minipage} \\*
-                 & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} \\
+                    #6
+                   \end{minipage}
+                 % & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} \\
+  }
+
+
+\newcommand\experienceLite[5]{
+  \textbf{#1}    & \begin{minipage}[t]{\rightcolumnlength}
+                    \vspace{-1pt}
+                     \textbf{#2}, {\small\textsc{#3}, #4}
+                   \end{minipage}\\[-5pt]
+                   {#5}
   }
 
 \newcommand\emptySeparator{\multicolumn{2}{c}{}\\}
@@ -460,12 +472,13 @@
   \bigskip
 }
 
-\newcommand*\referee[5]{
+\newcommand*\referee[6]{
   \hspace{1em}
   \begin{minipage}[t]{\dimexpr(\linewidth/3) - 3em}
     \begin{tabular}{>{}l >{}l}
       \multicolumn{2}{l}{\textbf{#1}}\\
       \multicolumn{2}{l}{\emph{#2}, \textsc{#3}}\\
+      \quad \ \faInfo & {#6} \\
       \quad \mailSymbol & \href{mailto:#4}{#4} \\
       \quad \faBook & #5 \\
     \end{tabular}
@@ -480,5 +493,5 @@
 
 
 % NAH
-% \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=false,factor=1100,stretch=10,shrink=10]{microtype}
-% \AtBeginEnvironment{verbatim}{\microtypesetup{activate=false}} % To avoid problems with verbatim-areas
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=false,factor=1100,stretch=10,shrink=10]{microtype}
+\AtBeginEnvironment{verbatim}{\microtypesetup{activate=false}} % To avoid problems with verbatim-areas

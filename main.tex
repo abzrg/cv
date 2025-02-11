@@ -7,21 +7,74 @@
 %     The MIT License (see https://opensource.org/license/mit)
 
 % pazoFont,
-\documentclass[pazoFont,alternative]{documentMeta}
+\documentclass[alternative]{documentMeta}
 
 % \usepackage[T1]{fontenc}
-% \usepackage{gentium}
+% \usepackage[OT1]{fontenc}
+% \renewcommand*\familydefault{\sfdefault}
+
+% \usepackage[scaled]{berasans}
+% \renewcommand*\familydefault{\sfdefault}  %% Only if the base font of the document is to be sans serif
+% \usepackage[T1]{fontenc}
+
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{biolinum}   %% Option 'sfdefault' only if
+%% the base font of the document is to be sans serif
+
+% \usepackage{times}
+
+% \usepackage[default]{cantarell} %% Use option "defaultsans" to use cantarell as sans serif only
+% \usepackage[T1]{fontenc}
+
+% \usepackage{epigrafica}
+% \usepackage[LGR,OT1]{fontenc}
+
+% \usepackage[T1]{fontenc}
+% \usepackage[lining]{InriaSans}
+% \renewcommand*\oldstylenums[1]{{\fontfamily{InriaSans-OsF}\selectfont #1}}
+% %% The font package uses mweights.sty which has som issues with the
+% %% \normalfont command. The following two lines fixes this issue.
+% \let\oldnormalfont\normalfont
+% \def\normalfont{\oldnormalfont\mdseries}
+
+% \usepackage{tgheros}
+% \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+% \usepackage[T1]{fontenc}
+
+% \usepackage[sfdefault]{inter} %% Option 'sfdefault' only if 'inter' is to be
+% % the base font of the document
+% \usepackage[T1]{fontenc}
+
+% \usepackage[math]{kurier}
+% \usepackage[T1]{fontenc}
+
+% \usepackage{libertinus}
+% \usepackage[T1]{fontenc}
+% \renewcommand*\familydefault{\sfdefault}
+
+% \usepackage[lf]{venturis} %% lf option gives lining figures as default; 
+% 			  %% remove option to get oldstyle figures as default
+% \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+% \usepackage[T1]{fontenc}
+
+% \usepackage{libris}
+% \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+% \usepackage[T1]{fontenc}
+
+% \usepackage[sfdefault]{overlock} %% Option 'sfdefault' only if the base font of the document is to be sans serif
+% \usepackage[T1]{fontenc}
+
 
 \name{Ali}{Bozorgzadeh}
-\tagline{Mechanical Engineer}
+\tagline{Mechanical Engineer (M.Sc.)}
 
 \socialinfo{
   \email{alixbozorgzadeh@gmail.com}
-  \linkedin{ali-bozorgzadeh-90aa07263}{LinkedIn}
-  \website{https://abzrg.github.io}{Personal Website}
+  \website{https://abzrg.github.io}{abzrg.github.io}
+  \linkedin{alibozorgzadeh}{LinkedIn}
   \github{abzrg}
   \website{https://scholar.google.com/citations?user=itt9zx8AAAAJ}{Google Scholar}
-  % \website{https://www.cfd-online.com/Forums/members/reverseila.html}{CFD-Online}
+  \website{https://www.cfd-online.com/Forums/members/reverseila.html}{CFD-Online}
 }
 
 
@@ -35,21 +88,20 @@
 {\textsc{Ali Bozorgzadeh -  Curriculum Vitae}}
 {\thepage}
 
-\vspace{-10pt}
-\input{include/education}
-\vspace{20pt}
-\input{include/interests}
-\vspace{30pt}
-\input{include/publications}
 % \vspace{-10pt}
-\newpage
-\input{include/computer_skills}
+\input{include/education}
+\vspace{10pt}
+\input{include/interests}
 \vspace{20pt}
+\input{include/publications}
+\vspace{5pt}
+\input{include/computer_skills}
+\newpage
 \input{include/testscores}
+\vspace{25pt}
+\input{include/certificates}
 \vspace{20pt}
 \input{include/teaching_experiences}
-\vspace{20pt}
-\input{include/certificates}
 \vspace{20pt}
 \input{include/references}
 
