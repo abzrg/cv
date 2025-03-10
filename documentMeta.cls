@@ -409,23 +409,23 @@
 %                      <Experience description (Could be a list)>
 %                    }
 %                    {<Technology list>}
-\newcommand\experience[7]{
+\newcommand\experience[5]{
   \textbf{#1}    & \begin{minipage}[t]{\rightcolumnlength}
-                     \textbf{#2}, {\small\textsc{#3}, #4}
+                     \textbf{#2}, {\small\textsc{#3}}
                    \end{minipage}  \\[2pt]
-         {#5}    & \begin{minipage}[t]{\rightcolumnlength}
-                    #6
+         {#4}    & \begin{minipage}[t]{\rightcolumnlength}
+                    #5
                    \end{minipage}
                  % & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} \\
   }
 
 
-\newcommand\experienceLite[5]{
+\newcommand\experienceLite[4]{
   \textbf{#1}    & \begin{minipage}[t]{\rightcolumnlength}
                     \vspace{-1pt}
-                     \textbf{#2}, {\small\textsc{#3}, #4}
+                     \textbf{#2}, {\small\textsc{#3}}
                    \end{minipage}\\[-5pt]
-                   {#5}
+                   {#4}
   }
 
 \newcommand\emptySeparator{\multicolumn{2}{c}{}\\}
