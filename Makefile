@@ -27,7 +27,6 @@
 
 INCDIR   := include
 BUILDDIR := build
-CLS      := documentMeta.cls
 BIB      := refs.bib
 SRC      := main.tex
 INCLUDES := $(wildcard $(INCDIR)/*.tex)
@@ -54,7 +53,7 @@ $(INCDIR):
 
 
 # $(PDF): $(BIB)
-$(PDF): $(SRC) $(CLS) $(INCLUDES) | $(BUILDDIR) $(INCDIR)
+$(PDF): $(SRC) $(INCLUDES) | $(BUILDDIR) $(INCDIR)
 	latexmk $(TEXFLAGS) $<
 	-ln -fs $(BUILDDIR)/$(<:.tex=.pdf) $@
 

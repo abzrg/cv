@@ -1,113 +1,171 @@
-% !TEX TS-program = pdflatex
-%
-% Author:
-%     Ali Bozorgzadeh
-%
-% Template license:
-%     The MIT License (see https://opensource.org/license/mit)
+%!TEX TS-program = pdflatex
+\documentclass[11pt, letterpaper]{article}
 
-% pazoFont,
-\documentclass[alternative]{documentMeta}
+\input{preamble.tex}
 
-\usepackage{mlmodern}
+% -----------------------------------------------------------------------------
 
-% \usepackage[T1]{fontenc}
-% \usepackage[OT1]{fontenc}
-% \renewcommand*\familydefault{\sfdefault}
+\newcommand{\name}{Ali Bozorgzadeh}
+\newcommand{\whoAmIShort}{CFD \& Scientific Computing Enthusiast}
+\newcommand{\bachelorUniversity}{Babol Noshirvani Uni. of Tech.}
+\newcommand{\masterUniversity}{Babol Noshirvani Uni. of Tech.}
 
-% \usepackage[scaled]{berasans}
-% \renewcommand*\familydefault{\sfdefault}  %% Only if the base font of the document is to be sans serif
-% \usepackage[T1]{fontenc}
+%------------------------------------------------------------------------------
 
-% \usepackage[T1]{fontenc}
-% \usepackage[sfdefault]{biolinum}   %% Option 'sfdefault' only if
-%% the base font of the document is to be sans serif
-
-% \usepackage{times}
-
-% \usepackage[default]{cantarell} %% Use option "defaultsans" to use cantarell as sans serif only
-% \usepackage[T1]{fontenc}
-
-% \usepackage{epigrafica}
-% \usepackage[LGR,OT1]{fontenc}
-
-% \usepackage[T1]{fontenc}
-% \usepackage[lining]{InriaSans}
-% \renewcommand*\oldstylenums[1]{{\fontfamily{InriaSans-OsF}\selectfont #1}}
-% %% The font package uses mweights.sty which has som issues with the
-% %% \normalfont command. The following two lines fixes this issue.
-% \let\oldnormalfont\normalfont
-% \def\normalfont{\oldnormalfont\mdseries}
-
-% \usepackage{tgheros}
-% \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
-% \usepackage[T1]{fontenc}
-
-% \usepackage[sfdefault]{inter} %% Option 'sfdefault' only if 'inter' is to be
-% % the base font of the document
-% \usepackage[T1]{fontenc}
-
-% \usepackage[math]{kurier}
-% \usepackage[T1]{fontenc}
-
-% \usepackage{libertinus}
-% \usepackage[T1]{fontenc}
-% \renewcommand*\familydefault{\sfdefault}
-
-% \usepackage[lf]{venturis} %% lf option gives lining figures as default; 
-% 			  %% remove option to get oldstyle figures as default
-% \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
-% \usepackage[T1]{fontenc}
-
-% \usepackage{libris}
-% \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
-% \usepackage[T1]{fontenc}
-
-% \usepackage[sfdefault]{overlock} %% Option 'sfdefault' only if the base font of the document is to be sans serif
-% \usepackage[T1]{fontenc}
-
-
-\name{Ali}{Bozorgzadeh}
-\tagline{Mechanical Engineer (M.Sc.)}
-
-\socialinfo{
-  \email{alixbozorgzadeh@gmail.com}
-  \website{https://abzrg.github.io}{abzrg.github.io}
-  \linkedin{alibozorgzadeh}{LinkedIn}
-  \github{abzrg}
-  \website{https://scholar.google.com/citations?user=itt9zx8AAAAJ}{Google Scholar}
-  \website{https://www.cfd-online.com/Forums/members/reverseila.html}{CFD-Online}
-}
-
-
-% --------------
 \begin{document}
-% --------------
 
-\makecvheader
-\makecvfooter
-{\textsc{\selectlanguage{english}\today}}
-{\textsc{Ali Bozorgzadeh -  Curriculum Vitae}}
-{\thepage}
+%==============================================================================
+% "business card" section
+%==============================================================================
 
-% \vspace{-10pt}
-\input{include/education}
-\vspace{10pt}
-\input{include/interests}
-\vspace{20pt}
-\input{include/publications}
-\vspace{5pt}
-\input{include/computer_skills}
-\newpage
-\input{include/testscores}
-\vspace{25pt}
-\input{include/certificates}
-\vspace{20pt}
-\input{include/teaching_experiences}
-\vspace{20pt}
-\input{include/references}
+\begin{minipage}[t][1.25in][t]{.5\textwidth}
+\begin{tabular}{@{}l@{}} % @{} removes tabular outer padding
+\\
+{\Huge\scshape \name}
+\begin{textblock*}{\textwidth}(8.4cm,2.2cm) % Width of the block and position (x,y)
+\includegraphics[width=0.35\linewidth]{./figures/Dove.eps}
+\end{textblock*}
+\\[2.35ex]
+{\large\itshape \color{jldGray} \whoAmIShort}
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t][1.25in][t]{.3\textwidth}
+\hfill
+\begin{tabular}{l@{}}
+    \href{mailto://alixbozorgzadeh@gmail.com}{\color{jldGray}alixbozorgzadeh\textcolor{jldGray!50}{@gmail.com}} \\
+    \href{https://linkedin.com/in/alibozorgzadeh}{\color{jldGray}\textcolor{jldGray!50}{in/}alibozorgzadeh} \\
+    \href{https://github.com/abzrg}{\color{jldGray}\textcolor{jldGray!50}{gh/}abzrg} \\
+    \href{https://abzrg.github.io}{\color{jldGray}abzrg\textcolor{jldGray!50}{.github.io}}
+\end{tabular}
+\end{minipage}
 
-% --------------
+\vspace{-2ex}
+My graduate research focused on CFD simulations of various fluid mechanics
+phenomena, including \emph{mass transport in water desalination devices} and
+\emph{particle separation in microfluidic systems}. Currently, my interests lie
+in \emph{Fluid-Solid Interaction} and the application of \emph{neural
+networks} in fluid mechanics.
+
+%==============================================================================
+% detail section
+%==============================================================================
+
+\section{Education}
+\begin{tabularx}{\textwidth}{p{45mm} X}
+    \textcolor{jldGray}{2018} -- 2022 & \textbf{M.Sc. in Mechanical Engineering}, \textsc{\color{jldGray}\masterUniversity}
+    \\
+                                      & \begin{itemize}[noitemsep,nolistsep]
+                                          \item {\color{jldGray}Topic:} Investigation of the Effect of Flow Pulsation and Increased Discharged Voltage on Desalination and Energy Usage of Capacitive Deionization.
+                                          \item {\color{jldGray}GPA:} 3.65/4
+                                          \item I implemented a custom OpenFOAM \link{https://github.com/abzrg/cdiFoam}{solver} to simulate salt absorption/desorption in flow-between mode.
+                                        \end{itemize}
+    \\[0.5ex]
+    \textcolor{jldGray}{2013} -- 2018 & \textbf{B.Sc. in Mechanical Engineering}, \textsc{\color{jldGray}\bachelorUniversity}
+\end{tabularx}
+
+
+
+\section{Experience}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{p{45mm} X}
+    \textcolor{jldGray}{2022} -- 2023 & \textbf{Research Assitant}, \textsc{\color{jldGray}\masterUniversity}
+    \\
+                                      & \begin{itemize}[noitemsep,nolistsep]
+                                           \item \textcolor{jldGray}{Topic:} Particle separation using dielectrophoresis and a gradient in momentum due to a wall-mounted obstacle. \link{https://www.sciencedirect.com/science/article/abs/pii/S0021967323003059}{Paper}
+                                           \item During this project, I developed OpenFOAM \link{https://github.com/abzrg/dep\_project}{code} consisting of a solver for solving fluid flow and electric potential equations, as well as a custom Lagrangian particle force.
+                                       \end{itemize}
+    \\
+    2022                              & \textbf{Teaching Assitant}, \textsc{\color{jldGray}\masterUniversity}
+    \\
+                                      & I prepared \link{https://www.youtube.com/playlist?list=PLdtuHsHJY9ejxkbkqBSpIHpGfhgte7cbY}{video-tutorials} on developing custom OpenFOAM code in a Linux command-line environment.
+\end{tabularx}
+\renewcommand{\arraystretch}{1.0}
+
+
+
+\section{Publications}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{p{45mm} X}
+  2023 &
+  % \begin{itemize}[noitemsep,nolistsep]
+  %     \item
+          \textcolor{jldGray}{Reza Derakhshan, \textbf{Ali Bozorgzadeh}, and Abas Ramiar.}
+          Numerical Investigation of Ternary Particle Separation in a Microchannel with a Wall-Mounted Obstacle Using Dielectrophoresis.
+          \textcolor{jldGray}{\emph{Journal of Chromatography A} (2023) \textsc{doi}: \link{https://doi.org/10.1016/j.chroma.2023.464079}{10.1016/j.chroma.2023.464079}}
+  % \end{itemize} \\
+  \\
+  2020 &
+  % \begin{itemize}[noitemsep,nolistsep]
+      % \item
+          \textcolor{jldGray}{Masoud Outokesh, Seyed S. M. Ajarostaghi, \textbf{Ali Bozorgzadeh}, and Kurosh Sedighi.}
+          Numerical evaluation of the effect of utilizing twisted tape with curved profile as a turbulator on heat transfer enhancement in a pipe.
+          \textcolor{jldGray}{\emph{Journal of Thermal Analysis and Calorimetry} (2020) \textsc{doi}: \link{https://link.springer.com/article/10.1007/s10973-020-09336-0}{10.1007/s10973-020-09336-0}}
+  % \end{itemize}
+\end{tabularx}
+\renewcommand{\arraystretch}{1.0}
+
+
+
+\section{Projects \& Open-Source}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{p{45mm} X}
+\link{https://github.com/abzrg/dep\_project}{dep\_project} & Source code of the dielectrophoresis particle separation project (OpenFOAM v2206). \link{https://www.sciencedirect.com/science/article/abs/pii/S0021967323003059}{Paper} \\
+\link{https://github.com/abzrg/nmpy}{nmpy} & A Python package for simple numerical method algorithms \\
+\link{https://github.com/abzrg/machine\_learning}{machine\_learning} & Collection of ML projects with regression, classification, and PyTorch MLP implementations \\
+\link{https://github.com/abzrg/parallel-programming}{parallel-programming} & Parallel programming using Unix processes, Pthreads and OpenMP \\
+\link{https://github.com/abzrg/ds}{ds} & Implementation of the Binary Search Tree data structure in C \\
+% \link{https://github.com/abzrg/oxpr}{oxpr} & A shell script that downloads (UK/US) pronunciations of a given word \\
+Bug-Report \& Docs & solids4foam, OpenFOAM, preCICE (adaptors), Palabos etc.
+\end{tabularx}
+\renewcommand{\arraystretch}{1.0}
+
+
+
+\section{Skills}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{p{45mm} X}
+  Programming &
+  \begin{itemize}
+      \item \cvtag{C/C++} OpenFOAM, OpenMP, MPI, Pthreads, OpenGL, Raylib
+      \item \cvtag{Python} Numpy, Matplotlib, Pandas, Scikit-Learn, PyTorch, SymPy
+      \item Other programming languages: \textcolor{jldGray!50}{POSIX} Shell, \LaTeX, Lua, Fortran, \textcolor{jldGray!50}{E}Lisp, Javascript, HTML, CSS
+  \end{itemize}
+  \\
+  Tools/Platforms & Linux (Debian/Arch), Git, Docker, Neovim, Emacs, SSH, Tmux
+  \\
+  Engineering Softwares & Ansys, FreeCAD, Paraview, Inkscape, Blender, Gnuplot
+\end{tabularx}
+\renewcommand{\arraystretch}{1.0}
+
+
+
+\section{Languages}
+\begin{tabularx}{\textwidth}{p{45mm} X}
+    English & Professional, IELTS 7.0/9.0 (\cvtag{R}8.0, \cvtag{L}7.5, \cvtag{S}7.0, \cvtag{W}6.0) \\
+    Persian & Native language
+\end{tabularx}
+
+
+
+\section{Certificates}
+\begin{tabularx}{\textwidth}{p{45mm} X}
+    \link{https://www.coursera.org/account/accomplishments/specialization/K0PDJBRMGHCV}{ML Specialization} &
+    \begin{itemize}
+        \item Supervised Machine Learning: Regression and Classification, \link{https://www.coursera.org/account/accomplishments/records/6IM8DUNQOS9M}{Cert.}
+        \item Advanced Learning Algorithms, \link{https://www.coursera.org/account/accomplishments/records/H532N5F8UGYA}{Cert.}
+        \item Unsupervised Learning, Recommenders, Reinforcement Learning, \link{https://www.coursera.org/account/accomplishments/records/6IM8DUNQOS9M}{Cert.}
+    \end{itemize}
+\end{tabularx}
+
+
+
+\vspace{-10pt}
+\section{References}
+\begin{tabularx}{\textwidth}{p{45mm} p{60mm} r}
+    Abas Ramiar & Supervisor/Co-author & \link{https://scholar.google.com/citations?user=ew-WXvQAAAAJ\&hl=en}{Google Scholar}  \\
+    Kurosh Sedighi & Course instructor/Co-author & \link{https://scholar.google.com/citations?user=RlAAZdwAAAAJ\&hl=en}{Google Scholar} \\
+    Mohsen Sheikholeslami & Course instructor/Thesis referee & \link{https://scholar.google.com/citations?user=5cJ2aF0AAAAJ\&hl=en}{Google Scholar}
+\end{tabularx}
+
 \end{document}
-% --------------
-

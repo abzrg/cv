@@ -1,0 +1,53 @@
+\usepackage[english]{babel}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+
+%% Underline (for URLs)
+\usepackage{soul}
+\setul{2pt}{0.7pt} % {distance}{thickness}
+
+%% Colors
+\usepackage[dvipsnames,svgnames]{xcolor}
+\definecolor{jldOrange}{HTML}{f4c472}          % Dandelion
+\definecolor{jldOrangeText}{HTML}{EEAE42}      % Slightly darker Dandelion
+\definecolor{jldLightOrange}{HTML}{fcf0db}     % Lighter Orange variation
+\definecolor{jldHighlight}{HTML}{f5e6cb}       % Highlight Orange variation
+\definecolor{jldGray}{HTML}{7b7d80}            % A soft shade of Gray 1
+\definecolor{jldGray2}{HTML}{5c5c5c}           % A soft shade of Gray 2
+\definecolor{jldWarmBeige}{HTML}{e4d4bf}       % A shade of Beige
+
+%% Highlight for extra emphasis
+\usepackage{tikz}
+\newcommand{\cvtag}[1]{%
+  \tikz[baseline]\node[anchor=base,fill=jldLightOrange,text=black, rounded corners=0.5ex,inner xsep=1ex,inner ysep =0.55ex,text height=1.7ex,text depth=.25ex]{#1};
+}
+
+%% Geometry
+\usepackage[left=0.65in, right=1in, vmargin=0.75in]{geometry}
+
+%% Font
+\usepackage[oldstylenums]{kpfonts}
+\usepackage[T1]{fontenc}
+\usepackage[final]{microtype}
+
+%% Items
+\usepackage{enumitem}
+\setlist[itemize]{left=0ex, label=\rule[0ex]{1.3ex}{1.3ex}, labelsep=2ex, font=\color{jldOrange}} % \faCaretRight
+
+%% URLs
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\link}[2]{\href{#1}{\setulcolor{jldOrangeText}\ul{#2}}}
+\usepackage{bookmark}
+
+%% Figures
+\usepackage{graphicx}
+\usepackage[absolute,overlay]{textpos}
+
+%% Title formatting
+\usepackage{titlesec}
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}
+
+%% No page numbering
+\pagenumbering{gobble}
