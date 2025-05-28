@@ -41,11 +41,12 @@
 \end{minipage}
 
 \vspace{-2ex}
-My graduate research focused on CFD simulations of various fluid mechanics
-phenomena, including \emph{mass transport in water desalination devices} and
-\emph{particle separation in microfluidic systems}. Currently, my interests lie
-in \emph{Fluid-Solid Interaction} and the application of \emph{neural
-networks} in fluid mechanics.
+% \vspace{-2ex}
+% My graduate research focused on CFD simulations of various fluid mechanics
+% phenomena, including \emph{mass transport in water desalination devices} and
+% \emph{particle separation in microfluidic systems}. Currently, my interests lie
+% in \emph{Fluid-Solid Interaction} and the application of \emph{neural
+% networks} in fluid mechanics.
 
 %==============================================================================
 % detail section
@@ -56,15 +57,16 @@ networks} in fluid mechanics.
     \textcolor{jldGray}{2018} -- 2022 & \textbf{M.Sc. in Mechanical Engineering}, \textsc{\color{jldGray}\masterUniversity}
     \\
                                       & \begin{itemize}[noitemsep,nolistsep]
-                                          \item {\color{jldGray}Topic:} Investigation of the Effect of Flow Pulsation and Increased Discharged Voltage on Desalination and Energy Usage of Capacitive Deionization.
+                                          \item {\color{jldGray}Topic:} Investigation of the Effect of Flow Pulsation and Increased Discharged Voltage on Desalination and Energy Usage of Capacitive Deionization. (\link{https://github.com/abzrg/cdiFoam}{code})
                                           \item {\color{jldGray}GPA:} 3.65/4
-                                          \item I implemented a custom OpenFOAM \link{https://github.com/abzrg/cdiFoam}{solver} to simulate salt absorption/desorption in flow-between mode.
+                                          % \item I implemented a custom OpenFOAM \link{https://github.com/abzrg/cdiFoam}{solver} to simulate salt absorption/desorption in flow-between mode.
                                         \end{itemize}
     \\[0.5ex]
     \textcolor{jldGray}{2013} -- 2018 & \textbf{B.Sc. in Mechanical Engineering}, \textsc{\color{jldGray}\bachelorUniversity}
 \end{tabularx}
 
 
+\vspace{8ex}
 
 \section{Experience}
 \renewcommand{\arraystretch}{1.1}
@@ -72,17 +74,18 @@ networks} in fluid mechanics.
     \textcolor{jldGray}{2022} -- 2023 & \textbf{Research Assitant}, \textsc{\color{jldGray}\masterUniversity}
     \\
                                       & \begin{itemize}[noitemsep,nolistsep]
-                                           \item \textcolor{jldGray}{Topic:} Particle separation using dielectrophoresis and a gradient in momentum due to a wall-mounted obstacle. \link{https://www.sciencedirect.com/science/article/abs/pii/S0021967323003059}{Paper}
-                                           \item During this project, I developed OpenFOAM \link{https://github.com/abzrg/dep\_project}{code} consisting of a solver for solving fluid flow and electric potential equations, as well as a custom Lagrangian particle force.
+                                           \item \textcolor{jldGray}{Topic:} Particle separation using dielectrophoresis and a gradient in momentum due to a wall-mounted obstacle. (\link{https://www.sciencedirect.com/science/article/abs/pii/S0021967323003059}{paper}; \link{https://github.com/abzrg/dep\_project}{code})
+                                           % \item During this project, I developed OpenFOAM \link{https://github.com/abzrg/dep\_project}{code} consisting of a solver for solving fluid flow and electric potential equations, as well as a custom Lagrangian particle force.
                                        \end{itemize}
     \\
     2022                              & \textbf{Teaching Assitant}, \textsc{\color{jldGray}\masterUniversity}
     \\
-                                      & I prepared \link{https://www.youtube.com/playlist?list=PLdtuHsHJY9ejxkbkqBSpIHpGfhgte7cbY}{video-tutorials} on developing custom OpenFOAM code in a Linux command-line environment.
+                                      & I prepared a series of \link{https://www.youtube.com/playlist?list=PLdtuHsHJY9ejxkbkqBSpIHpGfhgte7cbY}{video tutorials} on developing custom OpenFOAM code.
 \end{tabularx}
 \renewcommand{\arraystretch}{1.0}
 
 
+\vspace{4ex}
 
 \section{Publications}
 \renewcommand{\arraystretch}{1.5}
@@ -107,16 +110,16 @@ networks} in fluid mechanics.
 
 
 
-\section{Projects \& Open-Source}
+\section{Personal Projects \& Open-Source Contributions}
 \renewcommand{\arraystretch}{1.3}
 \begin{tabularx}{\textwidth}{p{45mm} X}
-\link{https://github.com/abzrg/dep\_project}{dep\_project} & Source code of the dielectrophoresis particle separation project (OpenFOAM v2206). \link{https://www.sciencedirect.com/science/article/abs/pii/S0021967323003059}{Paper} \\
+% \link{https://github.com/abzrg/dep\_project}{dep\_project} & Source code of the dielectrophoresis particle separation project (OpenFOAM v2206). \link{https://www.sciencedirect.com/science/article/abs/pii/S0021967323003059}{paper} \\
 \link{https://github.com/abzrg/nmpy}{nmpy} & A Python package for simple numerical method algorithms \\
-\link{https://github.com/abzrg/machine\_learning}{machine\_learning} & Collection of ML projects with regression, classification, and PyTorch MLP implementations \\
+% \link{https://github.com/abzrg/machine\_learning}{machine\_learning} & Collection of ML projects with regression, classification, and PyTorch MLP implementations \\
 \link{https://github.com/abzrg/parallel-programming}{parallel-programming} & Parallel programming using Unix processes, Pthreads and OpenMP \\
 \link{https://github.com/abzrg/ds}{ds} & Implementation of the Binary Search Tree data structure in C \\
 % \link{https://github.com/abzrg/oxpr}{oxpr} & A shell script that downloads (UK/US) pronunciations of a given word \\
-Bug-Report \& Docs & solids4foam, OpenFOAM, preCICE (adaptors), Palabos etc.
+Bug-Report \& Docs & solids4foam, OpenFOAM, preCICE (adaptors)
 \end{tabularx}
 \renewcommand{\arraystretch}{1.0}
 
@@ -127,14 +130,14 @@ Bug-Report \& Docs & solids4foam, OpenFOAM, preCICE (adaptors), Palabos etc.
 \begin{tabularx}{\textwidth}{p{45mm} X}
   Programming &
   \begin{itemize}
-      \item \cvtag{C/C++} OpenFOAM, OpenMP, MPI, Pthreads, OpenGL, Raylib
-      \item \cvtag{Python} Numpy, Matplotlib, Pandas, Scikit-Learn, PyTorch, SymPy
+      \item \cvtag{C/C++} OpenFOAM, OpenMP, MPI, Pthreads, OpenGL
+      \item \cvtag{Python} Numpy, Matplotlib, Pandas, Scikit-Learn, SymPy
       \item Other programming languages: \textcolor{jldGray!50}{POSIX} Shell, \LaTeX, Lua, Fortran, \textcolor{jldGray!50}{E}Lisp, Javascript, HTML, CSS
   \end{itemize}
   \\
-  Tools/Platforms & Linux (Debian/Arch), Git, Docker, Neovim, Emacs, SSH, Tmux
+  Tools & Linux, Git, Docker, SSH
   \\
-  Engineering Softwares & Ansys, FreeCAD, Paraview, Inkscape, Blender, Gnuplot
+  Other Softwares & Paraview, Inkscape, Blender, Gnuplot, FreeCAD
 \end{tabularx}
 \renewcommand{\arraystretch}{1.0}
 
@@ -142,7 +145,7 @@ Bug-Report \& Docs & solids4foam, OpenFOAM, preCICE (adaptors), Palabos etc.
 
 \section{Languages}
 \begin{tabularx}{\textwidth}{p{45mm} X}
-    English & Professional, IELTS 7.0/9.0 (\cvtag{R}8.0, \cvtag{L}7.5, \cvtag{S}7.0, \cvtag{W}6.0) \\
+    English & IELTS 7.0/9.0 (\cvtag{L}7.5, \cvtag{R}8.0, \cvtag{W}6.0, \cvtag{S}7.0) \\
     Persian & Native language
 \end{tabularx}
 
